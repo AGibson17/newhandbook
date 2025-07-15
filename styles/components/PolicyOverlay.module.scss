@@ -1,0 +1,163 @@
+@import '../variables';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $z-modal;
+  padding: $spacing-4;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal {
+  background: $white;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-xl;
+  max-width: 800px;
+  max-height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-6;
+  border-bottom: 1px solid $border-color;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $text-color;
+  margin: 0;
+}
+
+.closeButton {
+  width: 40px;
+  height: 40px;
+  border-radius: $border-radius-lg;
+  background: $background-color;
+  color: $text-muted;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $border-color;
+    color: $text-color;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+}
+
+.content {
+  padding: $spacing-6;
+  overflow-y: auto;
+  flex-grow: 1;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: $spacing-6;
+    margin-bottom: $spacing-3;
+    color: $text-color;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h1 { font-size: $font-size-2xl; }
+  h2 { font-size: $font-size-xl; }
+  h3 { font-size: $font-size-lg; }
+
+  p {
+    margin-bottom: $spacing-4;
+    line-height: $line-height-relaxed;
+    color: $text-color;
+  }
+
+  ul, ol {
+    margin-left: $spacing-6;
+    margin-bottom: $spacing-4;
+  }
+
+  li {
+    margin-bottom: $spacing-2;
+    line-height: $line-height-relaxed;
+  }
+
+  strong {
+    font-weight: $font-weight-semibold;
+  }
+
+  code {
+    background: $background-color;
+    padding: $spacing-1 $spacing-2;
+    border-radius: $border-radius;
+    font-family: $font-family-mono;
+    font-size: $font-size-sm;
+  }
+
+  blockquote {
+    border-left: 4px solid $primary-color;
+    padding-left: $spacing-4;
+    margin: $spacing-6 0;
+    font-style: italic;
+    color: $text-muted;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .modal {
+    margin: $spacing-4;
+    max-height: calc(100vh - #{$spacing-8});
+  }
+
+  .header {
+    padding: $spacing-4;
+  }
+
+  .content {
+    padding: $spacing-4;
+  }
+
+  .title {
+    font-size: $font-size-lg;
+  }
+}
