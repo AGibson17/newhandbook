@@ -3,6 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   
+  // GitHub Pages configuration
+  basePath: '/newhandbook',
+  assetPrefix: '/newhandbook/',
+  
   // Enable SCSS support
   sassOptions: {
     includePaths: ['./styles'],
