@@ -15,10 +15,6 @@ export function MainTabAccordion({ tabs, defaultOpen }: MainTabAccordionProps) {
   const [activeTab, setActiveTab] = useState<string>(defaultOpen || tabs[0]?.id);
 
   const toggleTab = (tabId: string) => {
-    // Prevent closing if this tab is already active (always keep one tab open)
-    if (activeTab === tabId) {
-      return;
-    }
     setActiveTab(tabId);
   };
 
@@ -68,7 +64,7 @@ export function MainTabAccordion({ tabs, defaultOpen }: MainTabAccordionProps) {
                 padding: '16px 24px',
                 backgroundColor: isActive ? '#0C1C33' : 'transparent',
                 border: 'none',
-                cursor: isActive ? 'default' : 'pointer',
+                cursor: 'pointer',
                 textAlign: 'left',
                 minHeight: '60px',
                 maxHeight: '60px',
@@ -77,7 +73,6 @@ export function MainTabAccordion({ tabs, defaultOpen }: MainTabAccordionProps) {
               }}
               aria-expanded={isActive}
               aria-controls={`tab-content-${tab.id}`}
-              disabled={isActive} // Prevent interaction if already active
             >
               {/* Icon Container */}
               <div 
