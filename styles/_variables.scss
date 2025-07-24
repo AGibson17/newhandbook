@@ -1,13 +1,25 @@
 // NexGov Brand Colors
-$navy:        #0C1C33;
+$navy:        #0C1C33;  // Primary brand color
 $blue:        #1C3354;
 $sky:         #477E9F;
-$red:         #C72C34;
-$arctic:      #F0F8F9;
+$red:         #C72C34;  // Accent color
+$arctic:      #F0F8F9;  // Background
 $frozen:      #A7C6DB;
 $white:       #FFFFFF;
 
-// Palette Roles
+// Additional UI Colors (from shadcn/ui design system)
+$gray-50:     #f9fafb;
+$gray-100:    #f3f4f6;
+$gray-200:    #e5e7eb;
+$gray-300:    #d1d5db;
+$gray-400:    #9ca3af;
+$gray-500:    #6b7280;
+$gray-600:    #4b5563;
+$gray-700:    #374151;
+$gray-800:    #1f2937;
+$gray-900:    #111827;
+
+// Palette Roles (mapped to NexGov brand)
 $primary-bg:      $arctic;
 $primary-text:    $navy;
 $secondary-text:  $blue;
@@ -15,6 +27,28 @@ $accent:          $red;
 $surface:         $white;
 $secondary-bg:    $frozen;
 $link:            $sky;
+
+// UI Design Tokens (shadcn/ui compatible)
+$background:      $white;
+$foreground:      $navy;
+$card:            $white;
+$card-foreground: $navy;
+$popover:         $white;
+$popover-foreground: $navy;
+$primary:         $navy;
+$primary-foreground: $white;
+$secondary:       $gray-100;
+$secondary-foreground: $navy;
+$muted:           $gray-100;
+$muted-foreground: $gray-600;
+$accent-bg:       $gray-100;
+$accent-foreground: $navy;
+$destructive:     $red;
+$destructive-foreground: $white;
+$border:          $gray-200;
+$input:           transparent;
+$input-background: $gray-50;
+$ring:            $navy;
 
 // Typography
 $font-headline:   'Runda Light', 'Aptos', Arial, sans-serif;
@@ -32,10 +66,18 @@ $body-size:   1rem;   // 16px
 $body-line:   1.5;    // 24px on 16px
 $eyebrow-size: 1.125rem; // 18px
 
-// Border Radius
-$radius-lg:   16px;
-$radius-md:   12px;
-$radius-sm:   8px;
+// Font weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Border Radius (shadcn/ui compatible)
+$radius-base:  0.625rem; // 10px
+$radius-sm:    calc($radius-base - 2px);
+$radius-md:    calc($radius-base - 1px);
+$radius-lg:    $radius-base;
+$radius-xl:    calc($radius-base + 2px);
 
 // Shadows
 $shadow-sm: 0 1px 6px rgba(28,51,84,0.08);
@@ -44,3 +86,13 @@ $shadow-md: 0 4px 20px rgba(28,51,84,0.15);
 // Z-index
 $z-modal:    1000;
 $z-nav:      900;
+
+// Spacing scale (similar to Tailwind)
+$spacing-1:  0.25rem;  // 4px
+$spacing-2:  0.5rem;   // 8px
+$spacing-3:  0.75rem;  // 12px
+$spacing-4:  1rem;     // 16px
+$spacing-6:  1.5rem;   // 24px
+$spacing-8:  2rem;     // 32px
+$spacing-12: 3rem;     // 48px
+$spacing-16: 4rem;     // 64px

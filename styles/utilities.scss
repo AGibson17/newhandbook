@@ -1,0 +1,109 @@
+// Utility classes to support shadcn/ui components without Tailwind
+@import 'variables';
+
+// Layout utilities
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: $spacing-2;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+// Text utilities
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.font-medium {
+  font-weight: $font-weight-medium;
+}
+
+// Background utilities
+.bg-background {
+  background-color: $background;
+}
+
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+
+// Border utilities
+.rounded-md {
+  border-radius: $radius-md;
+}
+
+// Transition utilities
+.transition-all {
+  transition: all 0.2s ease;
+}
+
+// State utilities
+.disabled\:pointer-events-none:disabled {
+  pointer-events: none;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
+
+// Focus utilities
+.outline-none {
+  outline: none;
+}
+
+// Text alignment
+.text-center {
+  text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+// Display utilities
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+// Sizing utilities
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+// Position utilities
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
